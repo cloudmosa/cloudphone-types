@@ -1,0 +1,23 @@
+# Development files
+.git
+.github
+.gitignore
+.vscode
+.idea
+
+# Documentation (keep only what's needed)
+# CLOUDPHONE_APIS.md is kept for reference
+# README.md is included by default
+
+# Development dependencies
+node_modules
+
+# Other files not needed in the package
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.DS_Store
+
+# CI/CD
+.github/workflows

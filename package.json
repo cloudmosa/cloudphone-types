@@ -1,0 +1,36 @@
+{
+  "name": "@cloudmosa/cloudphone-types",
+  "version": "1.0.0",
+  "description": "Cloud Phone TypeScript type declarations",
+  "keywords": [
+    "typescript",
+    "types",
+    "type-definitions",
+    "declarations",
+    "cloud-phone"
+  ],
+  "homepage": "https://github.com/cloudmosa/cloudphone-types#readme",
+  "bugs": {
+    "url": "https://github.com/cloudmosa/cloudphone-types/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cloudmosa/cloudphone-types.git"
+  },
+  "license": "Apache-2.0",
+  "author": "Tom Barrasso <barrasso@cloudmosa.com> (https://developer.cloudfone.com/)",
+  "type": "module",
+  "main": "types.d.ts",
+  "types": "types.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "test:types": "npx tsc --noEmit types.d.ts",
+    "format": "npx prettier --write \"**/*.{ts,d.ts,json,md}\"",
+    "format:check": "npx prettier --check \"**/*.{ts,d.ts,json,md}\"",
+    "validate": "npm run format:check && npm run test:types"
+  },
+  "devDependencies": {
+    "prettier": "^3.7.4",
+    "typescript": "^5.9.3"
+  }
+}

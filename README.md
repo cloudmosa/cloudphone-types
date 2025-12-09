@@ -7,19 +7,19 @@ Cloud Phone TypeScript type declarations.
 NPM
 
 ```bash
-npm install -D @cloudmosa/cloudphone-types
+npm install -D @cloudmosa-inc/cloudphone-types
 ```
 
 PNPM
 
 ```bash
-pnpm add @cloudmosa/cloudphone-types --save-dev
+pnpm add @cloudmosa-inc/cloudphone-types --save-dev
 ```
 
 Bun
 
 ```bash
-bun add --development @cloudmosa/cloudphone-types
+bun add --development @cloudmosa-inc/cloudphone-types
 ```
 
 ## Cloud Phone APIs

@@ -5,10 +5,6 @@
 .vscode
 .idea
 
-# Documentation (keep only what's needed)
-# CLOUDPHONE_APIS.md is kept for reference
-# README.md is included by default
-
 # Development dependencies
 node_modules
 

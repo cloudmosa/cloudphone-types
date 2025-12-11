@@ -151,9 +151,9 @@ declare global {
      *
      * @example
      * ```typescript
-     * // Show volume controls
+     * // Raise system volume
      * if (navigator.volumeManager) {
-     *   navigator.volumeManager.requestShow();
+     *   navigator.volumeManager.requestUp();
      * }
      * ```
      *
@@ -231,7 +231,7 @@ declare global {
      * input.setAttribute("x-puffin-entersfullscreen", "off");
      * ```
      *
-     * @see https://developer.cloudfone.com/docs/reference/multimedia/#inline-playback
+     * @see https://developer.cloudfone.com/docs/reference/feature-detection/#x-puffin-entersfullscreen
      */
     "x-puffin-entersfullscreen"?: "off";
   }
@@ -260,7 +260,7 @@ declare global {
      *
      * @see https://developer.cloudfone.com/docs/reference/multimedia/#inline-playback
      */
-    "x-puffin-playsinline"?: string | "";
+    "x-puffin-playsinline"?: string;
 
     /**
      * Disables the default fullscreen display for video elements.

@@ -99,7 +99,7 @@ if (await navigator.hasFeature("Vibrate")) {
 - This detects software capabilities, not hardware availability or permissions
 - Always catch exceptions when using detected features (e.g., `getUserMedia` may throw `NotAllowedError` or `NotFoundError`)
 
-### Documentation
+### Documentation - Feature Detection
 
 See [Feature Detection](https://developer.cloudfone.com/docs/reference/feature-detection/) for complete documentation.
 
@@ -138,16 +138,9 @@ Displays the volume HUD and immediately lowers the system volume by one incremen
 navigator.volumeManager.requestDown();
 ```
 
-### Example Usage
+### Example Usage - Volume Manager
 
 ```javascript
-// Show volume controls when media is playing
-document.getElementById("volumeButton").addEventListener("click", () => {
-  if (navigator.volumeManager) {
-    navigator.volumeManager.requestShow();
-  }
-});
-
 // Bind volume controls to custom keys
 document.addEventListener("keydown", (e) => {
   if (e.key === "1" && navigator.volumeManager) {
@@ -158,7 +151,7 @@ document.addEventListener("keydown", (e) => {
 });
 ```
 
-### Important Notes
+### Important Notes - Volume Manafger
 
 - Controls **system volume**, not playback volume
 - `HTMLMediaElement.volume` does not work on Cloud Phone; use `volumeManager` instead
@@ -166,7 +159,7 @@ document.addEventListener("keydown", (e) => {
 - While HUD is visible, arrow keys are intercepted for volume control
 - Volume HUD automatically dismisses after a few seconds of inactivity
 
-### Documentation
+### Documentation - Volume Manager
 
 See [Multimedia - Volume Manager API](https://developer.cloudfone.com/docs/reference/multimedia/#volume-manager-api) for complete documentation.
 
@@ -186,7 +179,7 @@ window.addEventListener("back", (event: Event) => void);
 
 The global `"back"` event fires when the user presses the Right Soft Key (RSK). By default, this navigates back in history or exits the app. You can intercept this behavior using `event.preventDefault()`.
 
-### Example Usage
+### Example Usage - Back Event
 
 #### Basic Override
 
@@ -227,7 +220,7 @@ window.addEventListener("back", (event) => {
 });
 ```
 
-### Important Notes
+### Important Notes - Back Event
 
 - RSK is the physical Right Soft Key on Cloud Phone devices
 - Default behavior: `history.back()` or exit app if no history
@@ -235,7 +228,7 @@ window.addEventListener("back", (event) => {
 - Call `window.close()` to explicitly quit the widget
 - If you don't call `preventDefault()`, the app will exit when history is empty
 
-### Documentation
+### Documentation - Back Event
 
 See [Cloud Phone Design - Soft Keys](https://developer.cloudfone.com/docs/guides/cloud-phone-design/#soft-keys) for complete documentation.
 
@@ -289,7 +282,7 @@ input.addEventListener("keydown", (e) => {
 });
 ```
 
-#### Important Notes
+#### Important Notes - Embedded Text Input
 
 - Only affects devices that support `EmbeddedTextInput` feature
 - On devices with fullscreen IME, attribute has no effect
@@ -302,7 +295,7 @@ input.addEventListener("keydown", (e) => {
 
 Disables the default fullscreen display for `<video>` elements.
 
-#### Usage
+#### Usage - Inline Playback
 
 HTML Attribute
 
@@ -317,7 +310,7 @@ const video = document.createElement("video");
 video.playsInline = true;
 ```
 
-#### When to Use
+#### When to Use - Inline Playback
 
 - Short, small videos (GIF-like clips)
 - Inline video previews
@@ -334,14 +327,14 @@ video.playsInline = true;
 </div>
 ```
 
-#### Important Notes
+#### Important Notes - Inline Playback
 
 - By default, Cloud Phone plays all videos in fullscreen
 - Use this attribute for videos that should remain inline
 - Particularly useful for short, looping clips or animations
 - Does not affect video playback controls or functionality
 
-### Documentation
+### Documentation - Inline Playback and Embedded Text Input
 
 - [Feature Detection - EmbeddedTextInput](https://developer.cloudfone.com/docs/reference/feature-detection/#embeddedtextinput)
 - [Multimedia - Inline Playback](https://developer.cloudfone.com/docs/reference/multimedia/#inline-playback)
@@ -350,15 +343,15 @@ video.playsInline = true;
 
 ## TypeScript Support
 
-For TypeScript projects, use the companion `cloudphone.d.ts` declaration file to enable type checking and autocompletion for all Cloud Phone APIs.
+For TypeScript projects, use the companion `types.d.ts` declaration file to enable type checking and autocompletion for all Cloud Phone APIs.
 
 ```typescript
 // Include in your project
-/// <reference path="./cloudphone.d.ts" />
+/// <reference path="./types.d.ts" />
 
 // Or add to tsconfig.json
 {
-  "include": ["cloudphone.d.ts"]
+  "include": ["types.d.ts"]
 }
 ```
 

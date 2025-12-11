@@ -1,6 +1,6 @@
 {
   "name": "@cloudmosa-inc/cloudphone-types",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Cloud Phone TypeScript type declarations",
   "keywords": [
     "typescript",
